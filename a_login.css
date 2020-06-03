@@ -1,0 +1,73 @@
+body{
+    overflow: hidden;
+    position: relative;
+    background:url(a_login_page_background.JPG);
+    background-size: cover;
+}
+
+h1{
+    margin: 0;
+    font-size: 80px;
+    color: white;
+}
+
+
+.a{
+    position: relative;
+    font-size: 90px;
+    margin-top: -40;
+    left: 50%;
+}
+
+.a::first-letter{
+    font-size: 100px;
+    color: red;
+}
+
+form{
+    position: relative;
+    margin-top: 14%;
+    margin-left: 35%;
+    padding: 10px;
+    width: 10px;
+}
+
+.admin{
+    border-right: 1px dotted;
+    border-left: 1px dotted;
+    border-top: none;
+    border-bottom: 1px solid;
+    background: transparent;
+    font-size: 30px;
+    font-weight: normal;
+    padding: 0px 0px;
+    margin: 20px;
+
+    outline: none;
+}
+
+::placeholder{
+    opacity: 0.1;
+    color: rgb(114, 114, 114);
+    font-weight: bold;
+}
+
+.admins{
+    position: relative;
+    top: 100px;
+    left: 550px;
+}
+
+#submit{
+    padding: 20px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.644);
+    font-weight: bolder;
+    font-size: 30px;
+    background: rgba(228, 228, 228, 0.432);
+    border-radius: 10% 100% 100% 100%;
+}
+
+#submit:hover{
+    color: rgba(0, 0, 0, 0.555);
+}

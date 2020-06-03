@@ -1,0 +1,76 @@
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background:linear-gradient(to right,cornflowerblue,blue);
+}
+
+.main{
+    width: 25%;
+    height: 40%;
+    padding: 40px;
+    margin-top: -160vh;
+    margin-left: 50vh;
+    background: white;
+    border-bottom: dotted;
+    border-top: dotted;
+    border-left: double;
+    border-right: double;
+}
+
+.print{
+    position: relative;
+    top: -50px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#amount{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#thank{
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    color: rgb(119, 0, 119);
+}
+
+#receipt{
+    position: relative;
+    top: 0px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+.footer{
+    background: white;
+    height: 200vh;
+    margin-top: -20vh;
+    margin-left: 80vh;
+    margin-right: -80vh;
+    border-radius: 50%;
+}
+
+.submit{
+    margin-top: 110vh;
+    margin-left: 100vh;
+    font-size: 20px;
+    height: 60px;
+    width: 150px;
+    color: white;
+    border-radius: 30%;
+    border: 1px solid blue;
+    background: rgb(22, 20, 20);
+    cursor: pointer;
+}
+
+.submit:hover{
+    background: black;
+    font-size: 21px;
+}
+

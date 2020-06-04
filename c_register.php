@@ -21,6 +21,9 @@
     $res=mysqli_query($conn,$query);
     if($res)
     {
+        $last_id = mysqli_insert_id($conn);
+        session_start();
+        $_SESSION["user_id"] = $last_id;
         header("Location: menu_page.php");
     }
     else

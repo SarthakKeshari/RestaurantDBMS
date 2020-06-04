@@ -1,5 +1,4 @@
 body{
-    overflow: hidden;
     background:linear-gradient(to right,lightblue,cornflowerblue);
 }
 
@@ -21,7 +20,7 @@ body{
     background: transparent;
 }
 
-.out_of_form1{
+/* .out_of_form1{
     position: relative;
     top: -870px;
     left: 270px;
@@ -33,7 +32,7 @@ body{
     top: -870px;
     left: 470px;
     height: 30px;
-}
+} */
 
 .pay{
     position: relative;

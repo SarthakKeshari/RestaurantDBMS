@@ -27,6 +27,8 @@
     $row = mysqli_fetch_array($result);
     if($row['Username'] == $Username && $row['Password'] == $Password)
     {
+        session_start();
+        $_SESSION["user_id"] = $row['id'];
         header("Location: menu_page.php"); 
         exit;
     }

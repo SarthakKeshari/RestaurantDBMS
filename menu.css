@@ -40,7 +40,7 @@ body{
 }
 
 .nav input:checked ~ .menunav{
-    width: 400px;
+    width: 500px;
 } 
 
 
@@ -109,9 +109,20 @@ body{
 
 .blue_stretch{
     position: relative;
-    height: 25px;
+    height: 45px;
     background-color: rgb(55, 182, 255);
-    
+}
+
+#customer_pic{
+    float: right;
+    margin-top: -2px;
+}
+
+#customer_tag{
+    font-size: 20px;
+    font-weight: bolder;
+    float: right;
+    margin: 10px;
 }
 
 .menu_head{

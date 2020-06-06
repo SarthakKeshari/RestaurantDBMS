@@ -17,14 +17,34 @@
                 <span></span>
                 <ul class="menunav">
                     <li> <a href="#Home">Menu</a> </li>
-                    <li> <a href="#">About Us</a> </li>
-                    <li> <a href="#">Contact Us</a> </li>
+                    <li> <a href="About_Us.php">About Us</a> </li>
+                    <li> <a href="Contact_Us.php">Contact Us</a> </li>
+                    <li> <a href="Log_Out.php">Log Out</a> </li>
                 </ul>
             </span>
         </div>
+
+
         <div class="blue_stretch">
-        
+        <?php
+            $conn = mysqli_connect("localhost", "root", "", "restaurant");
+            // Check connection
+            if ($conn->connect_error)
+            {
+            die("Connection failed: " . $conn->connect_error);
+            }
+            $sql_user = "SELECT * FROM customer WHERE id =". $_SESSION['user_id'];
+            $result_user=mysqli_query($conn,$sql_user);
+            ?>
+
+            <?php  while($row_user = mysqli_fetch_array($result_user)) { ?>
+              <p id="customer_tag"><?php echo $row_user['Username'] ;?> </p>
+              <img id="customer_pic" src="customer1.png" alt="Customer: ">
+          <?php } ?>
         </div>
+
+
+
         <a name="Home"></a>
         <div class="heading"><h2>You will be served with the best delicacy</h2></div>
         <div class="menu_head">
@@ -64,7 +84,7 @@
                   <?php while($row = $result->fetch_assoc()) 
                   { if($row['menu_categories_id'] == 1){ ?>
                     <li><input type="checkbox" name="check_<?php echo $row['item_id'] ;?>" id="cbsoups<?php echo $row['item_id'];?>" value="<?php echo $row['item_id'];?>" />
-                      <label for="cbsoups<?php echo $row['item_id'];?>" ><img src="menu/Soups/peanut masala.png"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
+                      <label for="cbsoups<?php echo $row['item_id'];?>" ><img src="menu/Soups/<?php echo $row['image']?>"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
                     </li>
                   <?php 
                   } 
@@ -79,7 +99,7 @@
                   <?php while($row = $result2->fetch_assoc()) 
                   { if($row['menu_categories_id'] == 2){?>
                    <li><input type="checkbox"name="check_<?php echo $row['item_id'] ;?>" id="cbsnacks<?php echo $row['item_id'];?>" value="<?php echo $row['item_id'];?>"  />
-                      <label for="cbsnacks<?php echo $row['item_id'];?>"><img src="menu/Soups/peanut masala.png"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
+                      <label for="cbsnacks<?php echo $row['item_id'];?>"><img src="menu/Snacks/<?php echo $row['image']?>"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
                     </li>
                   <?php 
                   } 
@@ -95,7 +115,7 @@
                   <?php while($row = $result3->fetch_assoc()) 
                   { if($row['menu_categories_id'] == 3){?>
                    <li><input type="checkbox"  name="check_<?php echo $row['item_id'] ;?>" id="cbVegStarters<?php echo $row['item_id'];?>" value="<?php echo $row['item_id'];?>" />
-                      <label for="cbVegStarters<?php echo $row['item_id'];?>"><img src="menu/Soups/peanut masala.png"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
+                      <label for="cbVegStarters<?php echo $row['item_id'];?>"><img src="menu/Starters_Veg/<?php echo $row['image']?>"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
                     </li>
                   <?php 
                   } 
@@ -111,7 +131,7 @@
                   <?php while($row = $result4->fetch_assoc()) 
                   { if($row['menu_categories_id'] == 4){?>
                    <li><input type="checkbox" name="check_<?php echo $row['item_id'] ;?>" id="cbNonVegStarters<?php echo $row['item_id'];?>" value="<?php echo $row['item_id'];?>"  />
-                      <label for="cbNonVegStarters<?php echo $row['item_id'];?>"><img src="menu/Soups/peanut masala.png"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
+                      <label for="cbNonVegStarters<?php echo $row['item_id'];?>"><img src="menu/Starters_Non_Veg/<?php echo $row['image']?>"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
                     </li>
                   <?php 
                   } 
@@ -125,9 +145,9 @@
                 <div class=items>
                   <ul>
                   <?php while($row = $result5->fetch_assoc()) 
-                  { if($row['menu_categories_id'] == 6){?>
+                  { if($row['menu_categories_id'] == 5){?>
                    <li><input type="checkbox"  name="check_<?php echo $row['item_id'] ;?>" id="cbMCVeg<?php echo $row['item_id'];?>" value="<?php echo $row['item_id'];?>" />
-                      <label for="cbMCVeg<?php echo $row['item_id'];?>"><img src="menu/Soups/peanut masala.png"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
+                      <label for="cbMCVeg<?php echo $row['item_id'];?>"><img src="menu/Main_Course_Veg/<?php echo $row['image']?>"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
                     </li>
                   <?php 
                   } 
@@ -143,7 +163,7 @@
                   <?php while($row = $result6->fetch_assoc()) 
                   { if($row['menu_categories_id'] == 6){?>
                    <li><input type="checkbox"  name="check_<?php echo $row['item_id'] ;?>" id="cbMCNon<?php echo $row['item_id'];?>" value="<?php echo $row['item_id'];?>"/>
-                      <label for="cbMCNon<?php echo $row['item_id'];?>"><img src="menu/Soups/peanut masala.png"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
+                      <label for="cbMCNon<?php echo $row['item_id'];?>"><img src="menu/Main_Course_Non_Veg/<?php echo $row['image']?>"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
                     </li>
                   <?php 
                   } 
@@ -159,7 +179,7 @@
                   <?php while($row = $result7->fetch_assoc()) 
                   { if($row['menu_categories_id'] == 7){?>
                    <li><input type="checkbox"   name="check_<?php echo $row['item_id'] ;?>" id="cbB<?php echo $row['item_id'];?>" value="<?php echo $row['item_id'];?>"/>
-                      <label for="cbB<?php echo $row['item_id'];?>"><img src="menu/Soups/peanut masala.png"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
+                      <label for="cbB<?php echo $row['item_id'];?>"><img src="menu/Breads/<?php echo $row['image']?>"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
                     </li>
                   <?php 
                   } 
@@ -175,7 +195,7 @@
                   <?php while($row = $result8->fetch_assoc()) 
                   { if($row['menu_categories_id'] == 8){?>
                    <li><input type="checkbox"   name="check_<?php echo $row['item_id'] ;?>" id="cbDess<?php echo $row['item_id'];?>" value="<?php echo $row['id'];?>"/>
-                      <label for="cbDess<?php echo $row['item_id'];?>"><img src="menu/Soups/peanut masala.png"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
+                      <label for="cbDess<?php echo $row['item_id'];?>"><img src="menu/Dessert/<?php echo $row['image']?>"  ><div id="food_name"><?php echo $row['item'] ?></div><div id="food_cost"><?php echo $row['item_price'] ?></div></label>
                     </li>
                   <?php 
                   } 
@@ -208,7 +228,7 @@
           console.log("hhbnk",$('#user').val());
           let myArray = [];
           var i=0;
-          for ( var j = 112; j <=174; j++){ 
+          for ( var j = 111; j <=174; j++){ 
           var check=$('input:checkbox[name=check_'+j+']').is(':checked');
             if(check==true){
               myArray[i]= j;
@@ -226,7 +246,7 @@
           function(message, status){
             console.log(message);
             console.log(status);
-            window.location.href = "http://localhost/sarthak/RestaurantDBMS/c_your_detail_page.php";
+            window.location.href = "http://192.168.126.1/RestaurantDBMS/c_your_detail_page.php";
 
             if(status ==  200){
             

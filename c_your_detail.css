@@ -4,7 +4,7 @@ body{
 
 .formbox{
     position: relative;
-    top: -540px;
+    top: -530px;
     left: 590px;
     width: 200px;
 }
@@ -17,38 +17,44 @@ body{
     padding: 1px 0;
     margin: 8px 0;
     outline: none;
+    font-size: 18px;
     background: transparent;
 }
 
-/* .out_of_form1{
+.out_of_form1{
     position: relative;
-    top: -870px;
-    left: 270px;
+    top: -990px;
+    left: 150px;
     height: 30px;
 }
 
 .out_of_form2{
     position: relative;
-    top: -870px;
-    left: 470px;
+    top: -995px;
+    left: 350px;
     height: 30px;
-} */
+}
+
+p{
+    font-size: 22px;
+    font-weight: bold;
+}
 
 .pay{
     position: relative;
-    top: -435px;
-    left: 1280px;
+    left: 677px;
+    top: 185px;
     border-radius: 1500%;
     width: 120px;
     height: 120px; 
     background:rgb(255, 198, 123);
-    border: rgb(235, 235, 235) solid;
+    border: rgb(235, 235, 235) solid 2px;
     text-align: center;
     text-decoration: none;
     line-height:30px;
     color: blue;
     border-width: 5px;
-    font-size: 30px;
+    font-size: 22px;
     outline-style: none;
     font-weight: bolder;
     font-family: Georgia, 'Times New Roman', Times, serif;

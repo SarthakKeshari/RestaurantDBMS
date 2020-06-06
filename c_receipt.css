@@ -7,7 +7,7 @@ body{
 
 .main{
     width: 25%;
-    height: 40%;
+    height: 45%;
     padding: 40px;
     margin-top: -160vh;
     margin-left: 50vh;
@@ -22,7 +22,7 @@ body{
     position: relative;
     top: -50px;
     font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #amount{
@@ -43,7 +43,7 @@ body{
     top: 0px;
     text-align: center;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 28px;
     color: rgb(0, 0, 0);
 }
 

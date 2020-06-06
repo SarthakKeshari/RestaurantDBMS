@@ -1,64 +1,64 @@
-﻿111,1,45,Tomato soup
-112,1,55,Veg. Sweet Corn Soup
-113,1,79,Veg. Manchow Soup
-114,1,109,Chicken Sweet Corn Soup
-115,1,129,Chicken Manchow Soup
-116,2,79,Peanut Masala
-117,2,85,Onion Pakoda
-118,2,99,Paneer Pakoda
-119,2,170,Chicken Pakoda
-120,2,229,Prawn Pakoda
-121,2,135,Vegetable Pakoda
-122,2,299,Chicken Cheese Balls
-123,2,129,Palak Pakoda
-124,2,399,Cashew Chicken Balls
-125,2,340,Mutton Keema Balls
-126,3,199,Paneer 65
-127,3,180,Andhra Chilli Paneer
-128,3,219,Paneer Manchurian
-129,3,199,Lemon Paneer
-130,3,230,Mushroom Kaju Masala
-131,3,159,Baby Corn Manchurian
-132,3,189,Baby Corn 65
-133,3,259,Chilli Mushroom
-134,3,199,Veg. Manchurian
-135,3,155,Paneer Tikka
-136,4,329,Chicken Patiala
-137,4,259,Chicken 65
-138,4,229,Ginger Chicken
-139,4,235,Menthi Chicken
-140,4,249,Royal Chicken Pakoda
-141,4,339,Dragon Chicken
-142,4,289,Schezwan Chicken
-143,5,45,Dal Fry
-144,5,55,Palak Dal
-145,5,55,Gongura Dal
-146,5,160,Mughlai Mushroom Curry
-147,5,235,Kadai Paneer
-148,5,299,Kaju Paneer Curry
-149,5,240,Palak Paneer
-150,5,199,Aloo Gobi Masala
-151,5,259,Paneer Makhani
-152,5,145,Veg. Kofta
-153,6,280,Butter Chicken
-154,6,210,Chicken 65
-155,6,380,Goan Prawn Curry
-156,6,250,Grilled Chicken
-157,6,299,Malabar Fish Biryani
-158,6,429,Mutton Korma
-159,6,480,Pina Colada Pork Ribs
-160,6,380,Tandoori Lamb Chops
-161,7,45,Plain Naan
-162,7,55,Butter Naan
-163,7,45,Butter Roti
-164,7,50,Tandoori Roti
-165,7,55,Missi Roti
-166,7,60,Lachha Paratha
-167,8,55,Doodhpak
-168,8,45,Gajar ka Halwa
-169,8,25,Gulab Jamun
-170,8,8,Jalebi
-171,8,65,Kesar Rasmalai
-172,8,35,Malai Kulfi
-173,8,16,Malpua
-174,8,39,Shahi Tukda
+﻿111,1,45,Tomato soup,tomato_soup.png
+112,1,55,Veg. Sweet Corn Soup,Veg._Sweetcorn_soup.jpg
+113,1,79,Veg. Manchow Soup,Vegetable_Manchow_Soup.jpg
+114,1,109,Chicken Sweet Corn Soup,Chicken_sweetcorn_soup.jpeg
+115,1,129,Chicken Manchow Soup,Chicken_manchow_soup.jpg
+116,2,79,Peanut Masala,peanut_masala.png
+117,2,85,Onion Pakoda,onion_pakoda.jpg
+118,2,99,Paneer Pakoda,Paneer_pakoras.jpg
+119,2,170,Chicken Pakoda,Chicken_pakoda.jpg
+120,2,229,Prawn Pakoda,prawn_pakoda.jpg
+121,2,135,Vegetable Pakoda,Vegetable_pakoras.jpg
+122,2,299,Chicken Cheese Balls,Chicken_Cheese_Balls.jpeg
+123,2,129,Palak Pakoda,Palak_Pakoda.jpg
+124,2,399,Cashew Chicken Balls,Cashew_Chicken_Balls.jpg
+125,2,340,Mutton Keema Balls,Mutton_Keema_Balls.jpg
+126,3,199,Paneer 65,Paneer_65.jpg
+127,3,180,Andhra Chilli Paneer,Andhra_Chilli_Paneer.jpg
+128,3,219,Paneer Manchurian,Paneer_Manchurian.jpg
+129,3,199,Lemon Paneer,Lemon_Paneer.jpg
+130,3,230,Mushroom Kaju Masala,Mushroom_Kaju_Masala.jpg
+131,3,159,Baby Corn Manchurian,Baby_Corn_Manchurian.jpg
+132,3,189,Baby Corn 65,Baby_Corn_65.jpg
+133,3,259,Chilli Mushroom,chilli_mushroom.jpg
+134,3,199,Veg. Manchurian,Veg_Manchurian.jpg
+135,3,155,Paneer Tikka,Paneer_Tikka.jpg
+136,4,329,Chicken Patiala,Chicken_Patiala.jpg
+137,4,259,Chicken 65,Chicken_65.jpg
+138,4,229,Ginger Chicken,Ginger_Chicken.jpg
+139,4,235,Menthi Chicken,Menthi_Chicken.jpg
+140,4,249,Royal Chicken Pakoda,Royal_Chicken_Pakoda.jpg
+141,4,339,Dragon Chicken,Dragon_Chicken.jpg
+142,4,289,Schezwan Chicken,Schezwan_Chicken.jpg
+143,5,45,Dal Fry,Dal_Fry.jpg
+144,5,55,Palak Dal,Dal_Palak.jpg
+145,5,55,Gongura Dal,Gongura_Dal.JPG
+146,5,160,Mughlai Mushroom Curry,Mughlai_Mushroom_Curry.jpg
+147,5,235,Kadai Paneer,Kadai_Paneer.jpg
+148,5,299,Kaju Paneer Curry,Kaju_Paneer_Cury.jpg
+149,5,240,Palak Paneer,Palak_Paneer.jpg
+150,5,199,Aloo Gobi Masala,Aloo_Gobi.jpg
+151,5,259,Paneer Makhani,Paneer_Makhani.jpg
+152,5,145,Veg. Kofta,Veg_kofta.jpg
+153,6,280,Butter Chicken,Butter_Chicken.png
+154,6,210,Chicken 65,Chicken_65.png
+155,6,380,Goan Prawn Curry,Goan_Prawn_Curry.png
+156,6,250,Grilled Chicken,Grilled_Chicken.jpg
+157,6,299,Malabar Fish Biryani,Malabar_Fish_Biryani.png
+158,6,429,Mutton Korma,Mutton_Korma.png
+159,6,480,Pina Colada Pork Ribs,Pina_Colada_Pork_Ribs.png
+160,6,380,Tandoori Lamb Chops,Tandoori_Lamb_Chops.png
+161,7,45,Plain Naan,Plain_Naan.jpg
+162,7,55,Butter Naan,Butter_Naan.jpg
+163,7,45,Butter Roti,Butter_Roti.jpg
+164,7,50,Tandoori Roti,Tandoori_Roti.jpg
+165,7,55,Missi Roti,Missi_Roti.jpeg
+166,7,60,Lachha Paratha,Lachha_Paratha.jpg
+167,8,55,Doodhpak,Doodhpak.jpg
+168,8,45,Gajar ka Halwa,Gajar_ka_halwa.jpg
+169,8,25,Gulab Jamun,Gulab_Jamun.jpg
+170,8,8,Jalebi,jalebi.jpg
+171,8,65,Kesar Rasmalai,Kesar_Rasmalai.jpg
+172,8,35,Malai Kulfi,Malai_Kulfi.jpg
+173,8,16,Malpua,Malpua.jpg
+174,8,39,Shahi Tukda,Shahi_Tukda.jpg

@@ -10,12 +10,12 @@
         <div class="loginbox">
             <a href="a_login_page.php"><img src="img/avatar.jpg" class="avatar"></a>
                 <h1>Employee Login</h1>
-                <form>
+                <form action="e_login.php" method="POST">
                     <p>Employee ID</p>
-                    <input type="text" name="" placeholder="Enter Employee ID" required>
+                    <input type="text" name="Emp_id" placeholder="Enter Employee ID" required>
                     <p>PIN</p>
-                    <input type="password" name="" placeholder="Enter PIN" required>
-                    <input href="#" type="submit" name="" value="Login">
+                    <input type="password" name="Emp_Pin" placeholder="Enter PIN" required>
+                    <input type="submit" value="Login">
                     <a href="#">Forgot Password?</a>
                     <br/>
 

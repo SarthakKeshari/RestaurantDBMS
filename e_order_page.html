@@ -8,39 +8,60 @@
     <title>Order Details</title>
     <style>
         body{
-            background: linear-gradient(cornflowerblue,blue);
-            background-repeat:no-repeat;
-            background-size: cover;
+            margin: 0;
+            padding:0;
         }
-
         h1{
-            font-size: 50px;
+            margin-top:0;
+            font-size: 60px;
             font-family: 'Caveat',cursive;
             text-align: center;
         }
 
-        .order_list{
-            height: 650px;
-            width: 80%;
-            background-color: white;
-            margin-left: auto;
-            margin-right: auto;
-            overflow-y: auto;
-            overflow-x:hidden;
+        #left{
+            background: linear-gradient(white,black);
+            float: left;
+            width:65%;
+            height: 750px;
         }
 
-        table{
+        #right{
+            background: linear-gradient(white,black);
+            float: right;
+            width:34.5%;
+            height: 750px;
+        }
+
+        .list{
+            margin: 20px;
+            height: 600px;
+            background-color: white;
+            margin-top: 
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .table_order{
             border-collapse: collapse;
             font-family: arial;
             margin: 25px 0;
             font-size: 0.9em;
-            min-width: 1216px;
+            min-width: 950px;
+            text-align: center;
+        }
+
+        .table_menu{
+            border-collapse: collapse;
+            font-family: arial;
+            margin: 25px 0;
+            font-size: 0.9em;
+            min-width: 550px;
             text-align: center;
         }
 
         table thead{
-            background-color: cornflowerblue;
-            color: black;
+            background-color: black;
+            color: white;
             font-weight: bold;
         }
 
@@ -57,15 +78,16 @@
         }
 
         table tr:last-of-type{
-            border-bottom: 2px solid cornflowerblue;
+            border-bottom: 2px solid black;
         }
 
     </style>
 </head>
 <body>
-    <h1>Orders for Today...</h1>
-    <div class="order_list">
-    <?php
+    <div id="left">
+        <h1>Orders...</h1>
+        <div class="list">
+        <?php
             $db_host='127.0.0.1';
             $db_user='root';
             $db_pass='';
@@ -86,14 +108,12 @@
             }
 
             echo "
-            <table class='table'>
+            <table class='table_order'>
             <thead>
             <tr>
             <th>Customer_ID</th>
             <th>Product_ID</th>
-            <th>Total Price(₹)</th>
             <th>Address</th>
-            <th>Order Date/Time</th>
             </tr>
             </thead>";
 
@@ -102,14 +122,58 @@
                 echo "<tr>
                 <td>".$row['customer_id']."</td>
                 <td>".$row['product_id']."</td>
-                <td>".$row['total_price']."</td>
                 <td>".$row['house_no'].",".$row['street_name'].",".$row['area_name']."</td>
-                <td>".$row['created_at']."</td>
                 </tr>";
             }
 
             echo "</table>";
         ?>
+        </div>
+    </div>
+
+    <div id="right">
+        <h1>Menu List...</h1>
+        <div class="list">
+        <?php
+            $db_host='127.0.0.1';
+            $db_user='root';
+            $db_pass='';
+            $db_name='restaurant';
+
+            $conn=mysqli_connect($db_host,$db_user,$db_pass,$db_name);
+            if(!$conn)
+            {
+                die('Failed to connect mysql database'.mysqli_connect_error());
+            }
+
+            $sql='SELECT * from menu';
+            $query = mysqli_query($conn,$sql);
+
+            if(!$query)
+            {
+                die('error found'.mysqli_error($conn));
+            }
+
+            echo "
+            <table class='table_menu'>
+            <thead>
+            <tr>
+            <th>ID</th>
+            <th>Food Item</th>
+            </tr>
+            </thead>";
+
+            while($row=mysqli_fetch_array($query))
+            {
+                echo "<tr>
+                <td>".$row['item_id']."</td>
+                <td>".$row['item']."</td>
+                </tr>";
+            }
+
+            echo "</table>";
+        ?>
+        </div>
     </div>
 </body>
 </html>

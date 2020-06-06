@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Restaurant Management</title>
+        <link rel="stylesheet" href="c_receipt.css" type="text/css">
+    </head>
+    <body>
+        <?php
+            $conn = mysqli_connect("localhost", "root", "", "restaurant");
+            // Check connection
+            if ($conn->connect_error)
+            {
+            die("Connection failed: " . $conn->connect_error);
+            }
+            session_start();
+            $sql = "SELECT * FROM customer WHERE id =". $_SESSION['user_id'];
+            $result=mysqli_query($conn,$sql);
+            ?>
+            <?php  while($row = mysqli_fetch_array($result)) { ?>
+    <div class="footer">
+            <input type="submit" class="submit" value="Print receipt" onclick="msg()">
+        </div>
+        <div class="main">
+        <div class="print">    
+            <p id="receipt">Receipt</p>
+            <p>Customer Id : <b><?php echo $row['id'] ;?></b></p>
+            <p>Customer Name : <b><?php echo $row['Username'] ;?></b></p>
+            <p>Mobile No. : <b><?php echo $row['Mobile'] ;?></b></p>
+            <?php } ?>
+            <?php  $sql1 = "SELECT * FROM customer_order WHERE customer_id =". $_SESSION['user_id'];
+            $result1=mysqli_query($conn,$sql1);
+            while($row1 = mysqli_fetch_array($result1)) { ?>
+            <p>Address : <b><?php echo $row1['house_no'] ;?>, <?php echo $row1['street_name'] ;?>, <?php echo $row1['area_name'] ;?></b></p>
+            <p id="amount">Amount : ₹<b><?php echo $row1['total_price'] ;?><b></p>
+            <p id="thank">Thank You! Visit again!</p>
+        </div>
+        </div>
+        <?php } 
+        // Removing session data
+        
+        // if(isset($_SESSION["user_id"])){
+        //     unset($_SESSION["user_id"]);
+        // }
+        // session_destroy();?>
+        
+        
+
+        <script>
+            function msg(){
+                print("Payment received");
+            }
+        </script>
+    </body>
+</html>
